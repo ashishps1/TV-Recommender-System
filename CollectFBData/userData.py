@@ -34,8 +34,8 @@ class UserData:
         print "\t\t<%s>%s</%s>\n" % (label, escape(val.encode('utf-8')), label)
 
     def main(self):
-    	graphApi = fbGraphAPI.GraphAPI(auth.get_token())
-    	friends = graphApi.get_connections("me", "friends")
+    	graph = fbGraphAPI.GraphAPI(auth.get_token())
+    	myFriends = graph.get_connections("me", "friends")
         outFile = open("friendData.json", "w+")
         print '{\n\tusers : {\n'
         outFile.write('{ users : {\n')
