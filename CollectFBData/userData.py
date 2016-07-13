@@ -37,7 +37,7 @@ class UserData:
     	graphApi = fbGraphAPI.GraphAPI(auth.get_token())
     	friends = graphApi.get_connections("me", "friends")
         outFile = open("friendData.json", "w+")
-        print '{ users : {\n'
+        print '{\n\tusers : {\n'
         outFile.write('{ users : {\n')
 
             # Loop through all my friends
